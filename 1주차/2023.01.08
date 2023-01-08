@@ -1,0 +1,16 @@
+1. React 조건에 따른 jsx 표현
+
+const Avatar = ({image, isNew}) => {
+  return (
+    <div className='avatar'>
+      <img
+        className='photo'
+        src={image} 
+        alt="avatar" 
+      />
+      {isNew && <span className='new'>new</span>}
+    </div>
+  );
+};
+
+위 코드를 봤을 때 {isNew && <span className='new'>new</span>}에서 isNew가 존재 할 때 span 태그를 보여주도록 작성할 수 있다.
