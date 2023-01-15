@@ -22,3 +22,14 @@ dependancy array를 캐싱하고 있고 이전 각 element를 반복하면서 de
 
 그래서 dependancy array 를 빈 배열로 넣어놓으면 한 번만 useEffect가 호출 되는것이다.
 
+## 2. useState의 비동기 or 동기
+
+useState는 비동기적으로 동작한다. 정확히는 setState 함수가 비동기로 동작한다. 
+
+### 왜? 비동기로 처리할까?
+
+성능이슈 때문이다. 매번 setState가 호출 될 때마다 화면이 리랜더링 되면 성능면에서 좋지 않기 때문에 setState를 batch 처리해서 하나의 리랜더링으로 묶는다.
+그래서 이벤트 콜백으로 setState를 호출 할 때 콜백 내부에서 setState가 여러개 있을 때 setState가 호출 될때마다 랜더링하는게 아닌 콜백이 끝날때까지 모두 모았다가 한번에 수행한다. 
+
+
+
