@@ -2,7 +2,7 @@
 
 ## 1. 화살표 중복 함수
 
-```
+```js
 const handleCheckboxChange = pathFn => e => {
     const name = e.target.name;
     if (e.target.checked) {
