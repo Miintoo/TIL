@@ -14,7 +14,7 @@ const handleCheckboxChange = pathFn => e => {
 
 화살표가 중복돼서 사용되는 함수의 경우에는
 
-```
+```js
 const handleCheckboxChange = pathFn => {
     return (e) => {
         const name = e.target.name;
@@ -28,3 +28,16 @@ const handleCheckboxChange = pathFn => {
 ```
 
 위 코드처럼 함수 내부에서 함수를 return 값으로 작성하고 싶을 경우 사용한다고 보면 된다.
+
+## 2. search 함수
+
+```js
+
+const test1 = "hello world";
+
+console.log(test1.search("h"); // 0
+
+```
+
+search 함수의 경우에는 문자열에서 인자에 해당하는 언소가 있을 경우 해당 위치를 return 해주는 함수이다. 
+만일 해당 값이 없을 경우에는 -1을 return 한다.
