@@ -54,5 +54,13 @@ const bodyData = JSON.stringify(data);
 await axios.post(serverURL, bodyData);
 ```
 
+## && 연산자
 
+A && B && C
 
+세가지 데이터가 있다면 A가 true 여야 다음으로 넘어가고 B가 true여야 C가 결과값이 되는 구조로 되어져 있다.
+앞에 데이터가 false라면 거기서 해당 로직은 멈춘다.
+
+true && <MyComponent />
+
+앞의 결과가 true여야 뒤에 컴포넌트가 실행되도록 로직을 짤 수 있다.
